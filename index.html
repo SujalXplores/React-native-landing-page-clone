@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#20232a">
+  <title>React Native - Learn once, write anywhere</title>
+  <link rel='icon' href='/favicon.ico' type='image/x-icon' />
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="d-flex flex-wrap justify-content-evenly py-2 bg-dark navbar--fixed-top">
+    <a class="d-flex align-items-center mb-3 ms-3 mb-md-0 text-white text-decoration-none">
+      <img class="bi me-2" width="40" height="32"
+        src="https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg" />
+      <span class="fs-4 lh-lg main-heading">React Native</span>
+      <select class="navbar__item dropdown dropdown--hoverable">
+        <option class="dropdown__link" value="Next">Next</option>
+        <option class="dropdown__link" value="0.66" selected>0.66</option>
+        <option class="dropdown__link" value="0.65">0.65</option>
+        <option class="dropdown__link" value="0.64">0.64</option>
+        <option class="dropdown__link" value="0.63">0.63</option>
+      </select>
+    </a>
+    <ul class="nav align-items-center">
+      <li class="nav-item"><a class="nav-link">Guides</a></li>
+      <li class="nav-item"><a class="nav-link">Components</a></li>
+      <li class="nav-item"><a class="nav-link">API</a></li>
+      <li class="nav-item"><a class="nav-link">Architecture</a></li>
+      <li class="nav-item"><a class="nav-link">Community</a></li>
+      <li class="nav-item"><a class="nav-link">Blog</a></li>
+      <li class="nav-item">
+        <a class="nav-link nav-github-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-github"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+          </svg>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <label class="toggle-darkmode-switch">
+            <input type="checkbox" class="checkbox" />
+            <span class="toggle-thumb">&nbsp;🌜 &nbsp;🌞</span>
+          </label>
+        </a>
+      </li>
+    </ul>
+  </header>
+  <!-- hero section -->
+  <section class="w-100 text-white col-xxl-8 px-4 py-5 hero-section">
+    <div class="socialLinks">
+      <a href="https://twitter.com/intent/follow?screen_name=reactnative&amp;region=follow_link"
+        class="twitter-follow-button">
+        <div class="icon"></div>
+        Follow @reactnative
+      </a>
+      <div class="github-button">
+        <span>
+          <span>
+            <div class="widget widget-lg">
+              <a class="btn btn-light" href="https://github.com/facebook/react-native" rel="noopener" target="_blank"
+                aria-label="Star facebook/react-native on GitHub">
+                <svg viewBox="0 0 16 16" width="16" height="16" class="octicon octicon-star" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z">
+                  </path>
+                </svg>
+                <span>Star</span>
+              </a>
+            </div>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="flex-row-reverse align-items-center justify-content-evenly flex-wrap d-flex g-5 py-4">
+      <div>
+        <svg class="lottie-animation" width="350" height="350" xmlns="http://www.w3.org/2000/svg"
+          viewBox="-200 -200 400 400">
+          <title>React Logo</title>
+          <clipPath id="screen">
+            <rect class="screen" rx="3%" width="180" height="300" x="-90" y="-150" fill="none" stroke="gray"></rect>
+          </clipPath>
+          <rect x="-25" y="120" width="50" height="25" rx="2" fill="white" stroke="none" class="stand"></rect>
+          <polygon points="-125,90 125,90 160,145 -160,145" fill="white" stroke="white" stroke-width="5"
+            stroke-linejoin="round" class="base"></polygon>
+          <rect class="screen background" rx="3%" width="180" height="300" x="-90" y="-150" stroke="none"></rect>
+          <g clip-path="url(#screen)" class="logo">
+            <g class="logoInner">
+              <circle cx="0" cy="0" r="30" fill="#61dafb"></circle>
+              <g stroke="#61dafb" stroke-width="15" fill="none" id="logo">
+                <ellipse rx="165" ry="64"></ellipse>
+                <ellipse rx="165" ry="64" transform="rotate(60)"></ellipse>
+                <ellipse rx="165" ry="64" transform="rotate(120)"></ellipse>
+              </g>
+            </g>
+            <line x1="-30" x2="30" y1="130" y2="130" stroke="white" stroke-width="8" stroke-linecap="round"
+              class="speaker"></line>
+          </g>
+          <rect class="screen" rx="3%" width="180" height="300" x="-90" y="-150" fill="none" stroke="white"></rect>
+        </svg>
+      </div>
+      <div>
+        <h1 class="display-1 lh-1 mb-3 hero-heading">React Native</h1>
+        <p class="lead display-6 fw-bold">Learn once, write anywhere.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+            Get Started
+          </button>
+          <button type="button" class="btn btn-link btn-lg px-4 text-decoration-none">
+            Learn basics &gt;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section native-apps">
+    <div class="two-cols reverse">
+      <div class="column first right">
+        <h2 class="heading">
+          Create native apps for Android and iOS using React
+        </h2>
+        <div>
+          React Native combines the best parts of native development with
+          React, a best-in-class JavaScript library for building user
+          interfaces.
+          <br /><br />
+          <strong>Use a little—or a lot</strong>. You can use React Native
+          today in your existing Android and iOS projects or you can create a
+          whole new app from scratch.
+        </div>
+      </div>
+      <div class="column last left">
+        <img alt=""
+          src="https://d33wubrfki0l68.cloudfront.net/d74da08f08b4a17c368b58d36ee23c368b4a6819/fff62/img/homepage/phones.png" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section native-code tint">
+    <div class="two-cols">
+      <div class="column first left">
+        <h2 class="heading">
+          Written in JavaScript—rendered with native code
+        </h2>
+        <div>
+          React primitives render to native platform UI, meaning your app uses
+          the same native platform APIs other apps do.
+          <br /><br />
+          <strong>Many platforms</strong>, one React. Create platform-specific
+          versions of components so a single codebase can share code across
+          platforms. With React Native, one team can maintain two platforms
+          and share a common technology—React.
+        </div>
+      </div>
+      <div class="column last right">
+        <div class="codeBlockContainer">
+          <div class="codeBlockContent">
+            <pre tabindex="0" class="prism-code"
+              style="color: rgb(255, 255, 255); background: rgb(40, 44, 52)"><code class="codeBlockLines_3Zfi"><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain" style="display: inline-block;"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain"></span><span class="token keyword" style="color: rgb(197, 165, 197);">import</span><span class="token plain"> React </span><span class="token keyword" style="color: rgb(197, 165, 197);">from</span><span class="token plain"> </span><span class="token string" style="color: rgb(141, 200, 145);">'react'</span><span class="token punctuation" style="color: rgb(101, 123, 131);">;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain"></span><span class="token keyword" style="color: rgb(197, 165, 197);">import</span><span class="token plain"> </span><span class="token punctuation" style="color: rgb(101, 123, 131);">{</span><span class="token plain">Text</span><span class="token punctuation" style="color: rgb(101, 123, 131);">,</span><span class="token plain"> View</span><span class="token punctuation" style="color: rgb(101, 123, 131);">}</span><span class="token plain"> </span><span class="token keyword" style="color: rgb(197, 165, 197);">from</span><span class="token plain"> </span><span class="token string" style="color: rgb(141, 200, 145);">'react-native'</span><span class="token punctuation" style="color: rgb(101, 123, 131);">;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain"></span><span class="token keyword" style="color: rgb(197, 165, 197);">import</span><span class="token plain"> </span><span class="token punctuation" style="color: rgb(101, 123, 131);">{</span><span class="token plain">Header</span><span class="token punctuation" style="color: rgb(101, 123, 131);">}</span><span class="token plain"> </span><span class="token keyword" style="color: rgb(197, 165, 197);">from</span><span class="token plain"> </span><span class="token string" style="color: rgb(141, 200, 145);">'./Header'</span><span class="token punctuation" style="color: rgb(101, 123, 131);">;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain"></span><span class="token keyword" style="color: rgb(197, 165, 197);">import</span><span class="token plain"> </span><span class="token punctuation" style="color: rgb(101, 123, 131);">{</span><span class="token plain">heading</span><span class="token punctuation" style="color: rgb(101, 123, 131);">}</span><span class="token plain"> </span><span class="token keyword" style="color: rgb(197, 165, 197);">from</span><span class="token plain"> </span><span class="token string" style="color: rgb(141, 200, 145);">'./Typography'</span><span class="token punctuation" style="color: rgb(101, 123, 131);">;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain" style="display: inline-block;"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain"></span><span class="token keyword" style="color: rgb(197, 165, 197);">const</span><span class="token plain"> </span><span class="token function-variable function" style="color: rgb(121, 182, 242);">WelcomeScreen</span><span class="token plain"> </span><span class="token operator" style="color: rgb(252, 146, 158);">=</span><span class="token plain"> </span><span class="token punctuation" style="color: rgb(101, 123, 131);">(</span><span class="token punctuation" style="color: rgb(101, 123, 131);">)</span><span class="token plain"> </span><span class="token operator" style="color: rgb(252, 146, 158);">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color: rgb(101, 123, 131);">(</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">  </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">View</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Header</span><span class="token tag" style="color: rgb(252, 146, 158);"> </span><span class="token tag attr-name" style="color: rgb(197, 165, 197);">title</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(101, 123, 131);">=</span><span class="token tag attr-value punctuation" style="color: rgb(101, 123, 131);">"</span><span class="token tag attr-value" style="color: rgb(141, 200, 145);">Welcome to React Native</span><span class="token tag attr-value punctuation" style="color: rgb(101, 123, 131);">"</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">/&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag" style="color: rgb(252, 146, 158);"> </span><span class="token tag attr-name" style="color: rgb(197, 165, 197);">style</span><span class="token tag script language-javascript script-punctuation punctuation" style="color: rgb(101, 123, 131);">=</span><span class="token tag script language-javascript punctuation" style="color: rgb(101, 123, 131);">{</span><span class="token tag script language-javascript" style="color: rgb(252, 146, 158);">heading</span><span class="token tag script language-javascript punctuation" style="color: rgb(101, 123, 131);">}</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain">Step One</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;/</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">      Edit App</span><span class="token punctuation" style="color: rgb(101, 123, 131);">.</span><span class="token plain">js to change </span><span class="token keyword" style="color: rgb(197, 165, 197);">this</span><span class="token plain"> screen and turn it</span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">      into your app</span><span class="token punctuation" style="color: rgb(101, 123, 131);">.</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;/</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag" style="color: rgb(252, 146, 158);"> </span><span class="token tag attr-name" style="color: rgb(197, 165, 197);">style</span><span class="token tag script language-javascript script-punctuation punctuation" style="color: rgb(101, 123, 131);">=</span><span class="token tag script language-javascript punctuation" style="color: rgb(101, 123, 131);">{</span><span class="token tag script language-javascript" style="color: rgb(252, 146, 158);">heading</span><span class="token tag script language-javascript punctuation" style="color: rgb(101, 123, 131);">}</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain">See Your Changes</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;/</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">      Press Cmd </span><span class="token operator" style="color: rgb(252, 146, 158);">+</span><span class="token plain"> </span><span class="token constant" style="color: rgb(90, 155, 207);">R</span><span class="token plain"> inside the simulator to reload</span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">      your app’s code</span><span class="token punctuation" style="color: rgb(101, 123, 131);">.</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;/</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag" style="color: rgb(252, 146, 158);"> </span><span class="token tag attr-name" style="color: rgb(197, 165, 197);">style</span><span class="token tag script language-javascript script-punctuation punctuation" style="color: rgb(101, 123, 131);">=</span><span class="token tag script language-javascript punctuation" style="color: rgb(101, 123, 131);">{</span><span class="token tag script language-javascript" style="color: rgb(252, 146, 158);">heading</span><span class="token tag script language-javascript punctuation" style="color: rgb(101, 123, 131);">}</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain">Debug</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;/</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">      Press Cmd </span><span class="token operator" style="color: rgb(252, 146, 158);">+</span><span class="token plain"> </span><span class="token constant" style="color: rgb(90, 155, 207);">M</span><span class="token plain"> or Shake your device to open the</span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">      React Native Debug Menu</span><span class="token punctuation" style="color: rgb(101, 123, 131);">.</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;/</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag" style="color: rgb(252, 146, 158);"> </span><span class="token tag attr-name" style="color: rgb(197, 165, 197);">style</span><span class="token tag script language-javascript script-punctuation punctuation" style="color: rgb(101, 123, 131);">=</span><span class="token tag script language-javascript punctuation" style="color: rgb(101, 123, 131);">{</span><span class="token tag script language-javascript" style="color: rgb(252, 146, 158);">heading</span><span class="token tag script language-javascript punctuation" style="color: rgb(101, 123, 131);">}</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain">Learn</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;/</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">      Read the docs to discover what to </span><span class="token keyword" style="color: rgb(197, 165, 197);">do</span><span class="token plain"> next</span><span class="token operator" style="color: rgb(252, 146, 158);">:</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">    </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;/</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">Text</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">   </span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&lt;/</span><span class="token tag class-name" style="color: rgb(250, 200, 99);">View</span><span class="token tag punctuation" style="color: rgb(101, 123, 131);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain"></span><span class="token punctuation" style="color: rgb(101, 123, 131);">)</span><span class="token punctuation" style="color: rgb(101, 123, 131);">;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(255, 255, 255); background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span class="token plain">  </span><br></span></code></pre>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section native-development light">
+    <div class="two-cols reverse">
+      <div class="column first right">
+        <h2 class="heading">Native Development For Everyone</h2>
+        <div>
+          React Native lets you create truly native apps and doesn't compromise your users' experiences.
+          It provides a core set of platform agnostic native components like <code>View</code>, <code>Text</code>, and
+          <code>Image</code>
+          that map directly to the platform’s native UI building blocks.
+        </div>
+      </div>
+      <div class="column last left">
+        <div class="dissection">
+          <img alt="native develpment"
+            src="https://d33wubrfki0l68.cloudfront.net/7943912760c2cb5fb1473c2a90d2843145cb338b/49841/img/homepage/dissection/0.png"
+            style="opacity: 1; left: 0px;">
+          <img alt="native develpment"
+            src="https://d33wubrfki0l68.cloudfront.net/76f8798241ffaadda0863fe8df768b0f6355632b/0a464/img/homepage/dissection/1.png"
+            style="opacity: 1; left: 0px;">
+          <img alt="native develpment"
+            src="https://d33wubrfki0l68.cloudfront.net/5f56a6b5d69810fee53ea83db8f9e6d68c118712/01dab/img/homepage/dissection/2.png"
+            style="opacity: 1; left: 0px;">
+          <img alt="native develpment"
+            src="https://d33wubrfki0l68.cloudfront.net/7e97b18b02060f1d4b65a5850b49e2488da391bb/d60ff/img/homepage/dissection/3.png"
+            style="opacity: 1; left: 0px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cross-platform tint">
+    <div class="two-cols">
+      <div class="column first left">
+        <h2 class="heading">Seamless Cross-Platform</h2>
+        <div>
+          React components wrap existing native code and interact with native APIs via
+          React’s declarative UI paradigm and JavaScript. This enables native app development
+          for whole new teams of developers, and can let existing native teams work much faster.
+        </div>
+      </div>
+      <div class="column last right">
+        <svg viewBox="0 0 498 452" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fill-rule="evenodd">
+            <rect height="141" rx="10" stroke="#979797" stroke-width="3" width="183" x="48.5" y="123.5"></rect>
+            <path d="M207.75 67.246l-.5.865-14 24.25" stroke="#999" stroke-width="6"></path>
+            <path
+              d="M186.673 101.593c.05 1.106.884 1.59 1.87 1.08l10.448-5.416c1.961-1.017 2.005-2.733.094-3.836l-9.67-5.584c-1.91-1.102-3.376-.212-3.276 2z"
+              fill="#999"></path>
+            <path d="M117.428 278.254l-.499.864-14 24.25" stroke="#999" stroke-width="6"></path>
+            <path
+              d="M96.351 312.6c.05 1.106.884 1.591 1.87 1.08l10.448-5.416c1.961-1.017 2.006-2.733.095-3.836l-9.672-5.584c-1.908-1.102-3.375-.212-3.274 2z"
+              fill="#999"></path>
+            <path d="M255.25 67.246l.5.865 14 24.25" stroke="#999" stroke-width="6"></path>
+            <path
+              d="M276.327 101.593c-.05 1.106-.884 1.59-1.87 1.08l-10.448-5.416c-1.961-1.017-2.005-2.733-.094-3.836l9.67-5.584c1.91-1.102 3.376-.212 3.276 2z"
+              fill="#999"></path>
+            <path d="M164.928 278l.5.865 14 24.25" stroke="#999" stroke-width="6"></path>
+            <path
+              d="M186.005 312.347c-.05 1.105-.884 1.59-1.87 1.08l-10.448-5.417c-1.96-1.016-2.005-2.732-.094-3.836l9.67-5.583c1.91-1.102 3.376-.212 3.276 2z"
+              fill="#999"></path>
+            <g transform="translate(169)">
+              <rect height="52" rx="8" stroke="#999" stroke-width="3" width="123" x="1.5" y="1.5"></rect><text
+                fill="#3d3d3d" font-family="Helvetica" font-size="18">
+                <tspan x="33.486" y="33">App.js</tspan>
+              </text>
+            </g>
+            <g transform="translate(56 198)">
+              <rect height="54" rx="8" stroke="#4077f7" width="167" x="1.5" y="0.5"></rect><text fill="#3d3d3d"
+                font-family="Helvetica" font-size="18">
+                <tspan x="27.477" y="33">Header.ios.js</tspan>
+              </text>
+            </g>
+            <g transform="translate(56 134)">
+              <rect height="54" rx="8" stroke="#0ca40d" width="167" x="0.5" y="0.5"></rect><text fill="#3d3d3d"
+                font-family="Helvetica" font-size="18">
+                <tspan x="8.458" y="33">Header.android.js</tspan>
+              </text>
+            </g>
+            <g transform="translate(258 122)">
+              <rect height="52" rx="8" stroke="#999" stroke-width="3" width="123" x="1.5" y="1.5"></rect><text
+                fill="#3d3d3d" font-family="Helvetica" font-size="18">
+                <tspan x="28.986" y="33">Body.js</tspan>
+              </text>
+            </g>
+            <g transform="translate(0 325)">
+              <rect height="52" rx="8" stroke="#999" stroke-width="3" width="123" x="1.5" y="1.5"></rect><text
+                fill="#3d3d3d" font-family="Helvetica" font-size="18">
+                <tspan x="37.986" y="33">Image</tspan>
+              </text>
+            </g>
+            <g transform="translate(151 325)">
+              <rect height="52" rx="8" stroke="#999" stroke-width="3" width="123" x="1.5" y="1.5"></rect><text
+                fill="#3d3d3d" font-family="Helvetica" font-size="18">
+                <tspan x="45.497" y="33">Text</tspan>
+              </text>
+            </g>
+            <g transform="translate(372 191)">
+              <rect height="52" rx="8" stroke="#999" stroke-width="3" width="123" x="1.5" y="1.5"></rect><text
+                fill="#3d3d3d" font-family="Helvetica" font-size="18">
+                <tspan x="45.497" y="33">Text</tspan>
+              </text>
+            </g>
+            <g transform="translate(372 260)">
+              <rect height="52" rx="8" stroke="#999" stroke-width="3" width="123" x="1.5" y="1.5"></rect><text
+                fill="#3d3d3d" font-family="Helvetica" font-size="18">
+                <tspan x="45.497" y="33">Text</tspan>
+              </text>
+            </g>
+            <g transform="translate(372 329)">
+              <rect height="52" rx="8" stroke="#999" stroke-width="3" width="123" x="1.5" y="1.5"></rect><text
+                fill="#3d3d3d" font-family="Helvetica" font-size="18">
+                <tspan x="45.497" y="33">Text</tspan>
+              </text>
+            </g>
+            <g transform="translate(372 397)">
+              <rect height="52" rx="8" stroke="#999" stroke-width="3" width="123" x="1.5" y="1.5"></rect><text
+                fill="#3d3d3d" font-family="Helvetica" font-size="18">
+                <tspan x="45.497" y="33">Text</tspan>
+              </text>
+            </g>
+            <path d="M318.5 186.5v241h6v-241z" fill="#999"></path>
+            <g>
+              <path d="M323 218.5h29" stroke="#999" stroke-width="6"></path>
+              <path
+                d="M363.284 217.42c.932.596.935 1.561 0 2.16l-9.915 6.34c-1.86 1.19-3.369.37-3.369-1.837v-11.167c0-2.204 1.504-3.029 3.37-1.836z"
+                fill="#999"></path>
+            </g>
+            <g>
+              <path d="M323 356.5h29" stroke="#999" stroke-width="6"></path>
+              <path
+                d="M363.284 355.42c.932.596.935 1.561 0 2.16l-9.915 6.34c-1.86 1.19-3.369.37-3.369-1.837v-11.167c0-2.204 1.504-3.029 3.37-1.836z"
+                fill="#999"></path>
+            </g>
+            <g>
+              <path d="M323 287.5h29" stroke="#999" stroke-width="6"></path>
+              <path
+                d="M363.284 286.42c.932.596.935 1.561 0 2.16l-9.915 6.34c-1.86 1.19-3.369.37-3.369-1.837v-11.167c0-2.204 1.504-3.029 3.37-1.836z"
+                fill="#999"></path>
+            </g>
+            <g>
+              <path d="M323 423.5h29" stroke="#999" stroke-width="6"></path>
+              <path
+                d="M363.284 422.42c.932.596.935 1.561 0 2.16l-9.915 6.34c-1.86 1.19-3.369.37-3.369-1.837v-11.167c0-2.204 1.504-3.029 3.37-1.836z"
+                fill="#999"></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fast-refresh light">
+    <div class="two-cols reverse">
+      <div class="column first right">
+        <h2 class="heading">Fast Refresh</h2>
+        <div>
+          <strong>See your changes as soon as you save.</strong> With the power of JavaScript,
+          React Native lets you iterate at lightning speed. No more waiting for native builds to finish.
+          Save, see, repeat.
+        </div>
+      </div>
+      <div class="column last left"><video muted="" autoplay="" loop="" playsinline=""
+          src="https://d33wubrfki0l68.cloudfront.net/b5f28d71a3dead99d229d442c3ca9e9a51b06777/d0bf9/img/homepage/reactrefresh.mp4"></video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section talks tint">
+    <div class="two-cols">
+      <div class="column first left">
+        <h2 class="heading">Talks</h2>
+        <div>
+          Members of the React Native team frequently speak at various conferences.
+          <br><br>
+          You can follow the latest news from the React Native team on Twitter
+        </div><a href="https://twitter.com/intent/follow?screen_name=reactnative&amp;region=follow_link"
+          class="twitter-follow-button">
+          <div class="icon"></div>Follow @reactnative
+        </a>
+      </div>
+      <div class="column last right">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/NCAY0HIfrwc"
+            title="Mobile Innovation with React Native, ComponentKit, and Litho" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section community light">
+    <div class="content">
+      <h2 class="heading">Facebook Supported, Community Driven</h2>
+      <div class="two-cols ">
+        <div class="column first left">
+          <p class="firstP">
+            <img src="https://reactnative.dev/img/homepage/fb-logo.svg" alt="">
+            <span>Facebook released React Native in 2015 and has been maintaining it ever since.</span>
+          </p>
+          <p>In 2018, React Native had the <a href="https://octoverse.github.com/2018/projects#repositories">2nd
+              highest</a> number of contributors for any repository in GitHub. Today, React Native is supported by
+            contributions from individuals and companies around the world including <span><a
+                href="https://callstack.com/">Callstack</a></span>, <span><a href="https://expo.io/">Expo</a></span>, <a
+              href="https://infinite.red/">Infinite Red</a>, <a href="https://www.microsoft.com/">Microsoft</a> and <a
+              href="https://swmansion.com/">Software Mansion</a>.
+          </p>
+          <p>Our community is always shipping exciting new projects and exploring platforms beyond Android and iOS with
+            repos like <span><a href="https://github.com/microsoft/react-native-windows#readme">React Native
+                Windows</a></span>, <a href="https://github.com/microsoft/react-native-macos#readme">React Native
+              macOS</a> and <a href="https://github.com/necolas/react-native-web#readme">React Native Web</a>.</p>
+        </div>
+        <div class="column last right">
+          <p>React Native is being used in thousands of apps, but it's likely you've already used it in one of these
+            apps:</p>
+          <ul class="app-list">
+            <li class="item"><a
+                href="https://code.facebook.com/posts/895897210527114/dive-into-react-native-performance/"><img
+                  src="https://reactnative.dev/img/showcase/facebook.png" alt="Facebook"></a></li>
+            <li class="item"><a
+                href="https://code.facebook.com/posts/1189117404435352/react-native-for-android-how-we-built-the-first-cross-platform-react-native-app/"><img
+                  src="https://reactnative.dev/img/showcase/adsmanager.png" alt="Facebook Ads Manager"></a></li>
+            <li class="item"><a href="https://analytics.facebook.com/blog"><img
+                  src="https://reactnative.dev/img/showcase/fba.png" alt="Facebook Analytics"></a></li>
+            <li class="item"><a
+                href="https://engineering.instagram.com/react-native-at-instagram-dd828a9a90c7#.3h4wir4zr"><img
+                  src="https://reactnative.dev/img/showcase/instagram.png" alt="Instagram"></a></li>
+            <li class="item"><img src="https://reactnative.dev/img/showcase/oculus.png" alt="Oculus"></li>
+            <li class="item"><a href="https://blog.coinbase.com/optimizing-react-native-7e7bf7ac3a34"><img
+                  src="https://reactnative.dev/img/showcase/coinbase.png" alt="Coinbase"></a></li>
+            <li class="item"><a
+                href="https://engineering.shopify.com/blogs/engineering/react-native-future-mobile-shopify"><img
+                  src="https://reactnative.dev/img/showcase/shopify.png" alt="Shopify"></a></li>
+            <li class="item"><a
+                href="https://engineering.tableau.com/react-native-at-tableau-3-years-in-89d43c38354c"><img
+                  src="https://reactnative.dev/img/showcase/tableau.png" alt="Tableau"></a></li>
+            <li class="item"><a href="https://tech.flipkart.com/the-journey-of-react-native-flipkart-47dcd0c3d1c6"><img
+                  src="https://reactnative.dev/img/showcase/flipkart.png" alt="FlipKart"></a></li>
+            <li class="item"><a
+                href="https://medium.com/mercari-engineering/why-we-decided-to-rewrite-our-ios-android-apps-from-scratch-in-react-native-9f1737558299"><img
+                  src="https://reactnative.dev/img/showcase/mercari.png" alt="Mercari"></a></li>
+            <li class="item"><a
+                href="https://www.nerdwallet.com/blog/engineering/beyond-the-browser-how-nerdwallet-went-native/"><img
+                  src="https://reactnative.dev/img/showcase/nerdwallet.png" alt="NerdWallet"></a></li>
+            <li class="item"><a
+                href="https://blog.discord.com/how-discord-achieves-native-ios-performance-with-react-native-390c84dcd502"><img
+                  src="https://reactnative.dev/img/showcase/discord.png" alt="Discord"></a></li>
+            <li class="item"><a href="https://dev.skype.com/react"><img
+                  src="https://reactnative.dev/img/showcase/skype.png" alt="Skype"></a>
+            </li>
+            <li class="item"><a
+                href="https://www.techatbloomberg.com/blog/bloomberg-used-react-native-develop-new-consumer-app/"><img
+                  src="https://reactnative.dev/img/showcase/bloomberg.png" alt="Bloomberg"></a></li>
+            <li class="item"><a
+                href="https://medium.com/@Pinterest_Engineering/supporting-react-native-at-pinterest-f8c2233f90e6"><img
+                  src="https://reactnative.dev/img/showcase/pinterest.png" alt="Pinterest"></a></li>
+            <li class="item"><a href="https://www.tesla.com/blog"><img
+                  src="https://reactnative.dev/img/showcase/tesla.png" alt="Tesla"></a>
+            </li>
+            <li class="item"><a href="https://eng.uber.com/ubereats-react-native/"><img
+                  src="https://reactnative.dev/img/showcase/ubereats.png" alt="Uber Eats"></a></li>
+            <li class="item"><a
+                href=" https://medium.com/walmartlabs/react-native-at-walmartlabs-cdd140589560#.ueonqqloc"><img
+                  src="https://reactnative.dev/img/showcase/walmart.png" alt="Walmart"></a></li>
+            <li class="item"><a
+                href="https://medium.com/wix-engineering/react-native-at-wix-the-architecture-db6361764da6"><img
+                  src="https://reactnative.dev/img/showcase/wix.png" alt="Wix.com"></a></li>
+            <li class="item"><a href="https://www.salesforce.com/products/einstein/einstein-voice/"><img
+                  src="https://reactnative.dev/img/showcase/salesforce.png" alt="Salesforce"></a></li>
+            <li class="item"><a
+                href="https://medium.com/zynga-engineering/why-how-words-with-friends-is-adopting-react-native-b24a405f421c"><img
+                  src="https://reactnative.dev/img/showcase/words2.png" alt="Words with Friends"></a></li>
+            <li class="item"><a href="https://www.callofduty.com/app"><img
+                  src="https://reactnative.dev/img/showcase/callofduty_companion.png"
+                  alt="Call of Duty Companion App"></a></li>
+            <li class="item"><a
+                href="https://corporate.foreca.com/en/news/how-to-make-a-global-weather-app-serving-both-ios-and-android-users"><img
+                  src="https://reactnative.dev/img/showcase/foreca.png" alt="Foreca"></a></li>
+            <li class="item"><a
+                href="https://medium.com/@and.global/providing-financial-access-to-the-underbanked-through-react-native-a8473691d06"><img
+                  src="https://reactnative.dev/img/showcase/lendmn.png" alt="LendMN"></a></li>
+            <li class="item"><a href="https://artsy.github.io/series/react-native-at-artsy/"><img
+                  src="https://raw.githubusercontent.com/artsy/eigen/master/Artsy/Resources/Images.xcassets/AppIcon.appiconset/AppIcon167.png"
+                  alt="Artsy"></a></li>
+            <li class="item"><a href="https://www.tencent.com/en-us/system.html"><img
+                  src="https://reactnative.dev/img/showcase/qq.png" alt="Tencent QQ"></a></li>
+          </ul>
+          <p>and <a href="/showcase">many more</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section get-started dark">
+    <div class="content">
+      <h2 class="heading">Give it a try</h2>
+      <ol class="steps">
+        <li>
+          <p>Run this</p>
+          <div class="terminal"><code>npx react-native init MyTestApp</code></div>
+        </li>
+        <li>
+          <p>Read these</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+              Get Started
+            </button>
+            <button type="button" class="btn btn-link btn-lg px-4 text-decoration-none">
+              Learn basics &gt;
+            </button>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="footer footer--dark">
+    <div class="container container-fluid">
+      <div class="row footer__links">
+        <div class="col footer__col">
+          <div class="footer__title">Docs</div>
+          <ul class="footer__items">
+            <li class="footer__item"><a class="footer__link-item" href="/docs/getting-started">Getting Started</a></li>
+            <li class="footer__item"><a class="footer__link-item" href="/docs/tutorial">Tutorial</a></li>
+            <li class="footer__item"><a class="footer__link-item" href="/docs/components-and-apis">Components and
+                APIs</a></li>
+            <li class="footer__item"><a class="footer__link-item" href="/docs/more-resources">More Resources</a></li>
+          </ul>
+        </div>
+        <div class="col footer__col">
+          <div class="footer__title">Community</div>
+          <ul class="footer__items">
+            <li class="footer__item">
+              <a class="footer__link-item" href="/help">The React Native Community</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link-item" href="/showcase">Who's using React Native?</a>
+            </li>
+            <li class="footer__item">
+              <a href="https://stackoverflow.com/questions/tagged/react-native" class="footer__link-item">
+                <span>Ask Questions on Stack Overflow
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                    <path fill="currentColor"
+                      d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                    </path>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="https://github.com/facebook/react-native/blob/master/CONTRIBUTING.md" class="footer__link-item">
+                <span>Contributor Guide
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                    <path fill="currentColor"
+                      d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                    </path>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="https://dev.to/t/reactnative" class="footer__link-item">
+                <span>DEV Community
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                    <path fill="currentColor"
+                      d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                    </path>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col footer__col">
+          <div class="footer__title">Find us</div>
+          <ul class="footer__items">
+            <li class="footer__item">
+              <a class="footer__link-item" href="/blog">Blog</a>
+            </li>
+            <li class="footer__item">
+              <a href="https://twitter.com/reactnative" class="footer__link-item">
+                <span>Twitter
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                    <path fill="currentColor"
+                      d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                    </path>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="https://github.com/facebook/react-native" class="footer__link-item">
+                <span>GitHub
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                    <path fill="currentColor"
+                      d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                    </path>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col footer__col">
+          <div class="footer__title">More</div>
+          <ul class="footer__items">
+            <li class="footer__item">
+              <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" class="footer__link-item">
+                <span>React
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                    <path fill="currentColor"
+                      d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                    </path>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="https://opensource.facebook.com/legal/privacy" target="_blank" rel="noopener noreferrer"
+                class="footer__link-item">
+                <span>Privacy Policy
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                    <path fill="currentColor"
+                      d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                    </path>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a href="https://opensource.facebook.com/legal/terms" target="_blank" rel="noopener noreferrer"
+                class="footer__link-item">
+                <span>Terms of Service
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                    <path fill="currentColor"
+                      d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
+                    </path>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom text--center">
+        <div class="margin-bottom--sm">
+          <a href="https://opensource.facebook.com" target="_blank" rel="noopener noreferrer"
+            class="footerLogoLink_1gX9">
+            <img
+              src="https://d33wubrfki0l68.cloudfront.net/b152eb4214943f96e83c4babde026b12221e68f1/a20c2/img/oss_logo.png"
+              alt="Facebook Open Source Logo" class="themedImage_Ir0T themedImage--light_2_E0 footer__logo">
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright © 2022 Facebook, Inc.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
