@@ -10,12 +10,5 @@ document.addEventListener('DOMContentLoaded', () => {
     main.classList.add(classes[classIndex]);
   }
   changeBackground();
-  setInterval(changeBackground, 3000);
-
-  // window.onscroll = function () {
-  //   console.log(window.pageYOffset);
-  //   if (window.pageYOffset > 486) {
-  //      TODO: Select image 1by1 and increase/decrease left and opacity of image on scroll
-  //   }
-  // };
+  setInterval(changeBackground, 2000);
 });
