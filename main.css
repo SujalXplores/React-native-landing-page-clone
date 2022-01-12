@@ -131,6 +131,69 @@ img.bi.me-2:hover {
   transition: 0.4s all ease;
 }
 
+.docsearch-search-icon {
+  margin-top: -1px;
+  width: 16px;
+  stroke-width: 1.6;
+}
+
+.docsearch-button-key {
+  align-items: center;
+  background: linear-gradient(-225deg, rgb(213, 219, 228), rgb(248, 248, 248));
+  border-radius: 3px;
+  box-shadow: var(--docsearch-key-shadow);
+  color: #969faf;
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  margin-right: 0.4em;
+  padding-bottom: 2px;
+  position: relative;
+  top: -1px;
+  width: 20px;
+}
+
+.docsearch-button,
+.docsearch-button-container {
+  align-items: center;
+  display: flex;
+}
+
+.docsearch-button-keys {
+  display: flex;
+  min-width: calc(40px + 0.8em);
+  align-items: center;
+  margin-top: 2px;
+}
+
+.docsearch-button-placeholder {
+  font-size: 1rem;
+  padding: 0 12px 0 6px;
+}
+
+.navbar .docsearch-button-key,
+.navbar .docsearch-button-placeholder {
+  font-size: 14px !important;
+}
+
+.docsearch-button {
+  background: #ebedf0;
+  border: 0;
+  color: var(--color-dark);
+  cursor: pointer;
+  font-weight: 500;
+  height: 36px;
+  justify-content: space-between;
+  padding: 0 8px;
+  user-select: none;
+  border-radius: 4px;
+  padding: 0 6px 0 10px;
+}
+
+.navbar__items--right > :last-child {
+  padding-right: 0;
+}
+
 .checkbox {
   opacity: 0;
   width: 0;
@@ -830,4 +893,8 @@ a:hover {
   }
 }
 
-/* -------------------media queries ended----------------------- */
+@media (min-width: 997px) {
+  .search-box {
+    padding: 0rem 1rem;
+  }
+}
