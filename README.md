@@ -2,7 +2,7 @@
 
 - [✔]: # Language: HTML, CSS, JS
 
-### [Live Demo](https://duckduckgo.com)
+### [Live Demo](https://sujalshah3234.github.io/React-native-landing-page-clone/)
 
 ### Things to do
 
