@@ -92,7 +92,7 @@ img.bi.me-2:hover {
 .dropdown {
   background: transparent;
   color: var(--color-white);
-  margin: 0 1rem;
+  margin: 0 1.5rem;
   border: 0;
 }
 
@@ -169,6 +169,8 @@ img.bi.me-2:hover {
 .docsearch-button-placeholder {
   font-size: 1rem;
   padding: 0 12px 0 6px;
+  color: #a2a2a2;
+  font-weight: 400;
 }
 
 .navbar .docsearch-button-key,
@@ -875,6 +877,9 @@ a:hover {
   }
   .get-started .content {
     width: 80%;
+  }
+  .lottie-animation {
+    width: 100%;
   }
 }
 
