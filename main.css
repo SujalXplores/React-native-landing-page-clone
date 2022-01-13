@@ -208,6 +208,11 @@ img.bi.me-2:hover {
   background: var(--color-dark) !important;
 }
 
+.hero-sub-heading {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 .socialLinks {
   display: flex;
   justify-content: flex-end;
@@ -254,6 +259,7 @@ img.bi.me-2:hover {
 }
 
 .hero-heading {
+  min-width: 456px;
   color: var(--color-primary) !important;
   font-weight: 500 !important;
 }
@@ -803,6 +809,9 @@ a:hover {
 }
 
 @media only screen and (min-width: 961px) {
+  .hero-section .two-cols {
+    grid-template-columns: 3fr 1fr;
+  }
   .native-apps {
     max-height: 400px;
   }
