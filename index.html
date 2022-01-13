@@ -18,12 +18,18 @@
 </head>
 
 <body>
-  <header class="d-flex flex-wrap justify-content-evenly py-2 bg-dark navbar--fixed-top">
-    <a class="d-flex align-items-center mb-3 ms-3 mb-md-0 text-white text-decoration-none">
+  <header class="d-flex flex-wrap justify-content-lg-evenly justify-content-between py-2 bg-dark navbar--fixed-top">
+    <a class="d-flex align-items-center mb-md-0 text-white text-decoration-none px-2">
+      <button class="navbar__toggle clean-btn d-inline d-xl-none" type="button" tabindex="0">
+        <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+          <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
+            d="M4 7h22M4 15h22M4 23h22"></path>
+        </svg>
+      </button>
       <img class="bi me-2" width="40" height="32"
         src="https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg" />
       <span class="fs-4 lh-lg main-heading">React Native</span>
-      <select class="navbar__item dropdown dropdown--hoverable">
+      <select class="navbar__item dropdown dropdown--hoverable d-xl-flex d-none">
         <option class="dropdown__link" value="Next">Next</option>
         <option class="dropdown__link" value="0.66" selected>0.66</option>
         <option class="dropdown__link" value="0.65">0.65</option>
@@ -31,14 +37,14 @@
         <option class="dropdown__link" value="0.63">0.63</option>
       </select>
     </a>
-    <ul class="nav align-items-center d-xl-flex d-none">
-      <li class="nav-item"><a class="nav-link">Guides</a></li>
-      <li class="nav-item"><a class="nav-link">Components</a></li>
-      <li class="nav-item"><a class="nav-link">API</a></li>
-      <li class="nav-item"><a class="nav-link">Architecture</a></li>
-      <li class="nav-item"><a class="nav-link">Community</a></li>
-      <li class="nav-item"><a class="nav-link">Blog</a></li>
-      <li class="nav-item">
+    <ul class="nav align-items-center">
+      <li class="nav-item d-xl-flex d-none"><a class="nav-link">Guides</a></li>
+      <li class="nav-item d-xl-flex d-none"><a class="nav-link">Components</a></li>
+      <li class="nav-item d-xl-flex d-none"><a class="nav-link">API</a></li>
+      <li class="nav-item d-xl-flex d-none"><a class="nav-link">Architecture</a></li>
+      <li class="nav-item d-xl-flex d-none"><a class="nav-link">Community</a></li>
+      <li class="nav-item d-xl-flex d-none"><a class="nav-link">Blog</a></li>
+      <li class="nav-item d-xl-flex d-none">
         <a class="nav-link nav-github-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-github"
             viewBox="0 0 16 16">
@@ -47,7 +53,7 @@
           </svg>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item d-xl-flex d-none">
         <a class="nav-link">
           <label class="toggle-darkmode-switch">
             <input type="checkbox" class="checkbox" />
@@ -56,7 +62,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <div class="search-box">
+        <div class="search-box px-2">
           <button type="button" class="docsearch docsearch-button" aria-label="Search">
             <span class="docsearch-button-container">
               <svg width="20" height="20" class="docsearch-search-icon" viewBox="0 0 20 20">
@@ -65,9 +71,9 @@
                   stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
                 </path>
               </svg>
-              <span class="docsearch-button-placeholder">Search</span>
+              <span class="docsearch-button-placeholder d-xl-flex d-none">Search</span>
             </span>
-            <span class="docsearch-button-keys">
+            <span class="docsearch-button-keys d-xl-flex d-none">
               <span class="docsearch-button-key">
                 <svg width="15" height="15" class="docsearch-control-key-icon">
                   <path
@@ -105,7 +111,7 @@
         </div>
       </div>
     </div>
-    <div class="two-cols reverse align-items-center">
+    <div class="flex-row-reverse align-items-center justify-content-evenly flex-wrap d-flex g-5 py-4 container">
       <div class="column first right">
         <svg class="lottie-animation" width="350" height="350" xmlns="http://www.w3.org/2000/svg"
           viewBox="-200 -200 400 400">
@@ -536,7 +542,7 @@
             <li class="footer__item">
               <a href="https://stackoverflow.com/questions/tagged/react-native" class="footer__link-item">
                 <span>Ask Questions on Stack Overflow
-                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="icon-external-link">
                     <path fill="currentColor"
                       d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
                     </path>
@@ -547,7 +553,7 @@
             <li class="footer__item">
               <a href="https://github.com/facebook/react-native/blob/master/CONTRIBUTING.md" class="footer__link-item">
                 <span>Contributor Guide
-                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="icon-external-link">
                     <path fill="currentColor"
                       d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
                     </path>
@@ -558,7 +564,7 @@
             <li class="footer__item">
               <a href="https://dev.to/t/reactnative" class="footer__link-item">
                 <span>DEV Community
-                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="icon-external-link">
                     <path fill="currentColor"
                       d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
                     </path>
@@ -577,7 +583,7 @@
             <li class="footer__item">
               <a href="https://twitter.com/reactnative" class="footer__link-item">
                 <span>Twitter
-                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="icon-external-link">
                     <path fill="currentColor"
                       d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
                     </path>
@@ -588,7 +594,7 @@
             <li class="footer__item">
               <a href="https://github.com/facebook/react-native" class="footer__link-item">
                 <span>GitHub
-                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="icon-external-link">
                     <path fill="currentColor"
                       d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
                     </path>
@@ -604,7 +610,7 @@
             <li class="footer__item">
               <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" class="footer__link-item">
                 <span>React
-                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="icon-external-link">
                     <path fill="currentColor"
                       d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
                     </path>
@@ -616,7 +622,7 @@
               <a href="https://opensource.facebook.com/legal/privacy" target="_blank" rel="noopener noreferrer"
                 class="footer__link-item">
                 <span>Privacy Policy
-                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="icon-external-link">
                     <path fill="currentColor"
                       d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
                     </path>
@@ -628,7 +634,7 @@
               <a href="https://opensource.facebook.com/legal/terms" target="_blank" rel="noopener noreferrer"
                 class="footer__link-item">
                 <span>Terms of Service
-                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_pqex">
+                  <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="icon-external-link">
                     <path fill="currentColor"
                       d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z">
                     </path>

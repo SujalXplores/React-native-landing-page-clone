@@ -58,6 +58,16 @@ a.nav-link {
   z-index: 2;
 }
 
+.clean-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  margin-right: 10px;
+}
+
 img.bi.me-2 {
   animation-name: reverse;
   animation-duration: 1s;
@@ -189,7 +199,7 @@ img.bi.me-2:hover {
   padding: 0 8px;
   user-select: none;
   border-radius: 4px;
-  padding: 0 6px 0 10px;
+  padding: 0 10px;
 }
 
 .navbar__items--right > :last-child {
@@ -213,6 +223,10 @@ img.bi.me-2:hover {
 .hero-sub-heading {
   font-size: 2rem;
   font-weight: 400;
+}
+
+.hero-section .two-cols .column.left {
+  padding-right: 0;
 }
 
 .socialLinks {
@@ -261,9 +275,13 @@ img.bi.me-2:hover {
 }
 
 .hero-heading {
-  min-width: 456px;
   color: var(--color-primary) !important;
   font-weight: 500 !important;
+}
+
+.hero-section .two-cols .column {
+  max-width: none;
+  padding-right: 0;
 }
 
 .btn-primary {
@@ -700,7 +718,7 @@ a:hover {
   width: 9px;
 }
 
-.iconExternalLink_pqex {
+.icon-external-link {
   margin-left: 0.3rem;
   position: relative;
   top: 1px;
