@@ -18,7 +18,8 @@
 </head>
 
 <body>
-  <header class="d-flex flex-wrap justify-content-lg-evenly justify-content-between py-2 bg-dark navbar--fixed-top">
+  <header
+    class="d-flex flex-wrap justify-content-lg-evenly justify-content-between bg-dark navbar--fixed-top main-header">
     <a class="d-flex align-items-center mb-md-0 text-white text-decoration-none px-2">
       <button class="navbar__toggle clean-btn d-inline d-xl-none" type="button" tabindex="0">
         <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
@@ -28,7 +29,7 @@
       </button>
       <img class="bi me-2" width="40" height="32"
         src="https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg" />
-      <span class="fs-4 lh-lg main-heading">React Native</span>
+      <span class="main-heading">React Native</span>
       <select class="navbar__item dropdown dropdown--hoverable d-xl-flex d-none">
         <option class="dropdown__link" value="Next">Next</option>
         <option class="dropdown__link" value="0.66" selected>0.66</option>
@@ -54,12 +55,10 @@
         </a>
       </li>
       <li class="nav-item d-xl-flex d-none">
-        <a class="nav-link">
-          <label class="toggle-darkmode-switch">
-            <input type="checkbox" class="checkbox" />
-            <span class="toggle-thumb">&nbsp;🌜 &nbsp;🌞</span>
-          </label>
-        </a>
+        <label class="toggle-darkmode-switch">
+          <input type="checkbox" class="checkbox" />
+          <span class="toggle-thumb">🌜 &nbsp;🌞</span>
+        </label>
       </li>
       <li class="nav-item">
         <div class="search-box px-2">
@@ -111,7 +110,7 @@
         </div>
       </div>
     </div>
-    <div class="flex-row-reverse align-items-center justify-content-evenly flex-wrap d-flex g-5 py-4 container">
+    <div class="flex-row-reverse align-items-center justify-content-evenly flex-wrap d-flex g-5 py-1 container">
       <div class="column first right">
         <svg class="lottie-animation" width="350" height="350" xmlns="http://www.w3.org/2000/svg"
           viewBox="-200 -200 400 400">
@@ -139,8 +138,8 @@
         </svg>
       </div>
       <div class="column last left">
-        <h1 class="display-1 lh-1 mb-3 hero-heading">React Native</h1>
-        <p class="fw-normal hero-sub-heading">Learn once, write anywhere.</p>
+        <h1 class="hero-heading">React Native</h1>
+        <p class="hero-sub-heading">Learn once, write anywhere.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
           <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
             Get Started
@@ -463,7 +462,7 @@
             <li class="item"><a href="https://eng.uber.com/ubereats-react-native/"><img
                   src="https://reactnative.dev/img/showcase/ubereats.png" alt="Uber Eats"></a></li>
             <li class="item"><a
-                href=" https://medium.com/walmartlabs/react-native-at-walmartlabs-cdd140589560#.ueonqqloc"><img
+                href="https://medium.com/walmartlabs/react-native-at-walmartlabs-cdd140589560#.ueonqqloc"><img
                   src="https://reactnative.dev/img/showcase/walmart.png" alt="Walmart"></a></li>
             <li class="item"><a
                 href="https://medium.com/wix-engineering/react-native-at-wix-the-architecture-db6361764da6"><img
