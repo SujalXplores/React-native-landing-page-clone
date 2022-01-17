@@ -6,5 +6,5 @@
 
 ### Things to do
 
-> [ ]: Add onscroll event for native app animation
+> [ ]: Add onscroll event for native app animation<br>
 > [ ]: DocSearch input in Navbar
