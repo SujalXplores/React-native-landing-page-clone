@@ -160,6 +160,10 @@ img.bi.me-2:hover {
   cursor: pointer;
 }
 
+.toggle-thumb:before:hover {
+  box-shadow: rgb(6, 188, 238) 0px 0px 4.50224px 4.66816px;
+}
+
 .toggle-thumb:before {
   content: '';
   height: 20px;
@@ -282,7 +286,7 @@ img.bi.me-2:hover {
 }
 
 .twitter-follow-button {
-  background-color: #1b95e0;
+  background-color: #1b95e0 !important;
   text-decoration: none;
   border-radius: 4px;
   box-sizing: border-box;
@@ -298,8 +302,8 @@ img.bi.me-2:hover {
 }
 
 .twitter-follow-button:hover {
-  background-color: #0c7abf;
-  color: var(--color-white);
+  background-color: rgb(12, 122, 191) !important;
+  color: var(--color-white) !important;
 }
 
 .widget > .btn-light {
@@ -591,6 +595,11 @@ table {
   color: var(--color-black);
   border-bottom: 1px solid rgb(190, 195, 201);
   line-height: 21px;
+}
+
+.section p a:hover {
+  background-color: rgba(187, 239, 253, 0.6);
+  color: var(--color-black) !important;
 }
 
 iframe {
