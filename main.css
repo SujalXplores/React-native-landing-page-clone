@@ -210,10 +210,10 @@ img.bi.me-2:hover {
   height: 18px;
   justify-content: center;
   margin-right: 0.4em;
-  padding-bottom: 2px;
   position: relative;
   top: -1px;
   width: 20px;
+  font-size: 14px;
 }
 
 .docsearch-button,
@@ -497,13 +497,6 @@ img {
   grid-template-areas: 'b a';
 }
 
-.two-cols {
-  grid-template-areas: 'a b';
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0 auto;
-  max-width: 900px;
-}
-
 .two-cols .column.first {
   grid-area: a;
 }
@@ -528,21 +521,18 @@ img {
   background-color: #f2f2f2;
 }
 
-.codeBlockContainer_1ukp {
+.code-block-container {
   background: var(--color-dark);
-}
-
-.codeBlockContainer_1ukp {
   margin-bottom: 0;
   overflow: visible;
 }
 
-.codeBlockContent {
+.code-block-content {
   direction: ltr;
   position: relative;
 }
 
-.codeBlockLines_3Zfi {
+.code-block-lines {
   float: left;
   font: inherit;
   min-width: 100%;
@@ -553,6 +543,27 @@ pre,
 table {
   overflow: auto;
   margin-bottom: 0 !important;
+}
+
+.copy-button {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  opacity: 0;
+  padding: 6.8px 8.5px !important;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  transition: opacity 0.2s ease-in-out;
+  user-select: none;
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+.code-block-container:hover .copy-button {
+  opacity: 1;
 }
 
 /* section native-development */
