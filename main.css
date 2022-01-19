@@ -54,7 +54,7 @@ video {
 
 .main-header {
   padding: 8.5px 16px;
-  height: 4rem;
+  height: 3.75rem;
 }
 
 .section.dark {
@@ -141,6 +141,22 @@ img.bi.me-2:hover {
   color: var(--color-dark);
 }
 
+.dropdown:after {
+  border-color: currentcolor transparent;
+  border-style: solid;
+  border-width: 0.4em 0.4em 0;
+  content: '';
+  margin-left: 0.3em;
+  position: relative;
+  top: 2px;
+  transform: translateY(-50%);
+}
+
+.nav-github-link:hover {
+  color: var(--color-white) !important;
+  opacity: 0.5;
+}
+
 .toggle-darkmode-switch {
   display: inline-block;
   width: 52px;
@@ -160,8 +176,8 @@ img.bi.me-2:hover {
   cursor: pointer;
 }
 
-.toggle-thumb:before:hover {
-  box-shadow: rgb(6, 188, 238) 0px 0px 4.50224px 4.66816px;
+.toggle-thumb:hover::before {
+  box-shadow: 0 0 2px 3px var(--color-primary);
 }
 
 .toggle-thumb:before {
@@ -173,6 +189,7 @@ img.bi.me-2:hover {
   bottom: 2px;
   border-radius: 50%;
   background-color: #e2e8f0;
+  border: 1px solid #4d4d4d;
   transition: 0.4s all ease;
 }
 
@@ -225,17 +242,23 @@ img.bi.me-2:hover {
 }
 
 .docsearch-button {
+  font-family: Arial, sans-serif;
   background: #ebedf0;
   border: 0;
   color: var(--color-dark);
-  cursor: pointer;
   font-weight: 500;
   height: 36px;
   justify-content: space-between;
-  padding: 0 8px;
   user-select: none;
   border-radius: 7px;
   padding: 0 10px;
+}
+
+.docsearch-button:hover {
+  background: var(--color-white);
+  box-shadow: inset 0 0 0 2px var(--color-primary);
+  color: #1c1e21;
+  outline: 0;
 }
 
 .navbar__items--right > :last-child {
@@ -315,9 +338,9 @@ img.bi.me-2:hover {
 .hero-heading {
   color: var(--color-primary) !important;
   font-weight: 500 !important;
-  line-height: 5.25rem;
+  line-height: 1;
   margin: 0px 0px 20px;
-  font-size: 5.25rem;
+  font-size: 5rem;
   margin-bottom: 20px;
   margin-top: 0px;
 }
