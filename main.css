@@ -23,7 +23,7 @@ html {
   background-color: transparent;
   color: #1c1e21 !important;
   color-scheme: light;
-  font: 100%/1.65 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+  font: 17px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
     Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
@@ -507,9 +507,9 @@ img {
   width: 100%;
 }
 
-.two-cols .column.left {
+/* .two-cols .column.left {
   padding-right: 50px;
-}
+} */
 
 .fast-refresh,
 .native-code .column.last {
