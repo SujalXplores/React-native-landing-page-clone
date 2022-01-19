@@ -539,6 +539,10 @@ img {
   padding: 1rem;
 }
 
+pre {
+  font-size: 0.875em !important;
+}
+
 pre,
 table {
   overflow: auto;
