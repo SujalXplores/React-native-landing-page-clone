@@ -290,7 +290,7 @@ img.bi.me-2:hover {
   padding-right: 0;
 }
 
-.socialLinks {
+.social-links {
   display: flex;
   justify-content: flex-end;
   margin: -10px auto 0;
@@ -333,6 +333,11 @@ img.bi.me-2:hover {
   padding: 0.2rem 0.5rem;
   margin: 0 1rem;
   font-size: 0.8rem;
+}
+
+.github-button span {
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .hero-heading {
@@ -995,6 +1000,9 @@ a:hover {
 }
 
 @media screen and (max-width: 760px) {
+  .hero-section .social-links {
+    margin-top: -2rem;
+  }
   .hero-heading {
     font-size: 60px;
   }
