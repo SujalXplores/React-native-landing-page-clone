@@ -889,6 +889,9 @@ a:hover {
   .hero-section .two-cols {
     grid-template-columns: 3fr 1fr;
   }
+  .native-apps-img {
+    margin-top: -20px;
+  }
   .native-apps {
     max-height: 400px;
   }
