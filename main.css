@@ -890,7 +890,7 @@ a:hover {
     grid-template-columns: 3fr 1fr;
   }
   .native-apps-img {
-    margin-top: -20px;
+    margin-top: -25px;
   }
   .native-apps {
     max-height: 400px;
@@ -947,6 +947,9 @@ a:hover {
 }
 
 @media only screen and (min-width: 481px) and (max-width: 960px) {
+  .hero-section .column.last {
+    text-align: center;
+  }
   .native-apps .column.last {
     margin: 0 auto;
     width: 66.7%;
