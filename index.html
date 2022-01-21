@@ -19,82 +19,80 @@
 
 <body>
   <header
-    class="d-flex flex-wrap justify-content-xl-evenly justify-content-between bg-dark navbar--fixed-top main-header mx-auto">
-    <a class="d-flex align-items-center mb-md-0 text-decoration-none px-2">
-      <button class="navbar__toggle clean-btn d-inline d-xl-none text-white" type="button" tabindex="0">
-        <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
-          <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
-            d="M4 7h22M4 15h22M4 23h22"></path>
-        </svg>
-      </button>
-      <img class="bi me-2" width="40" height="32"
-        src="https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg" />
-      <span class="main-heading">React Native</span>
-      <select class="navbar__item dropdown dropdown--hoverable d-xl-flex d-none">
-        <option class="dropdown__link" value="Next">Next</option>
-        <option class="dropdown__link" value="0.67" selected>0.67</option>
-        <option class="dropdown__link" value="0.66">0.66</option>
-        <option class="dropdown__link" value="0.65">0.65</option>
-        <option class="dropdown__link" value="0.64">0.64</option>
-        <option class="dropdown__link" value="0.63">0.63</option>
-      </select>
-    </a>
-    <ul class="nav align-items-center">
-      <li class="nav-item d-xl-flex d-none"><a class="nav-link">Guides</a></li>
-      <li class="nav-item d-xl-flex d-none"><a class="nav-link">Components</a></li>
-      <li class="nav-item d-xl-flex d-none"><a class="nav-link">API</a></li>
-      <li class="nav-item d-xl-flex d-none"><a class="nav-link">Architecture</a></li>
-      <li class="nav-item d-xl-flex d-none"><a class="nav-link">Community</a></li>
-      <li class="nav-item d-xl-flex d-none"><a class="nav-link">Blog</a></li>
-      <li class="nav-item d-xl-flex d-none">
-        <a class="nav-link nav-github-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-github"
-            viewBox="0 0 16 16">
-            <path
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+    class="d-flex flex-wrap justify-content-xl-evenly justify-content-between bg-dark navbar--fixed-top main-header">
+    <div class="d-flex justify-content-between mx-auto w-100 nav-wrapper">
+      <a class="d-flex align-items-center mb-md-0 text-decoration-none px-2">
+        <button class="navbar__toggle clean-btn d-inline d-xl-none text-white" type="button" tabindex="0">
+          <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
+            <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
+              d="M4 7h22M4 15h22M4 23h22"></path>
           </svg>
-        </a>
-      </li>
-      <li class="nav-item d-xl-flex d-none">
-        <label class="toggle-darkmode-switch">
-          <input type="checkbox" class="checkbox" />
-          <span class="toggle-thumb">
-            <span>🌜</span>
-            <span>🌞</span>
-          </span>
-        </label>
-      </li>
-      <li class="nav-item">
-        <div class="search-box px-2">
-          <button type="button" class="docsearch docsearch-button" aria-label="Search">
-            <span class="docsearch-button-container">
-              <svg width="20" height="20" class="docsearch-search-icon" viewBox="0 0 20 20">
-                <path
-                  d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
-                  stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-              </svg>
-              <span class="docsearch-button-placeholder d-xl-flex d-none">Search</span>
+        </button>
+        <img class="bi me-2" width="40" height="32"
+          src="https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg" />
+        <span class="main-heading">React Native</span>
+        <span class="navbar__item dropdown dropdown--hoverable d-xl-flex d-none">
+          <span class="dropdown__link">0.67</span>
+        </span>
+      </a>
+      <ul class="nav align-items-center">
+        <li class="nav-item d-xl-flex d-none"><a class="nav-link">Guides</a></li>
+        <li class="nav-item d-xl-flex d-none"><a class="nav-link">Components</a></li>
+        <li class="nav-item d-xl-flex d-none"><a class="nav-link">API</a></li>
+        <li class="nav-item d-xl-flex d-none"><a class="nav-link">Architecture</a></li>
+        <li class="nav-item d-xl-flex d-none"><a class="nav-link">Community</a></li>
+        <li class="nav-item d-xl-flex d-none"><a class="nav-link">Blog</a></li>
+        <li class="nav-item d-xl-flex d-none">
+          <a class="nav-link nav-github-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-github"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+          </a>
+        </li>
+        <li class="nav-item d-xl-flex d-none">
+          <label class="toggle-darkmode-switch">
+            <input type="checkbox" class="checkbox" />
+            <span class="toggle-thumb">
+              <span>🌜</span>
+              <span>🌞</span>
             </span>
-            <span class="docsearch-button-keys d-xl-flex d-none">
-              <span class="docsearch-button-key">
-                <svg width="15" height="15" class="docsearch-control-key-icon">
+          </label>
+        </li>
+        <li class="nav-item">
+          <div class="search-box px-2">
+            <button type="button" class="docsearch docsearch-button" aria-label="Search">
+              <span class="docsearch-button-container">
+                <svg width="20" height="20" class="docsearch-search-icon" viewBox="0 0 20 20">
                   <path
-                    d="M4.505 4.496h2M5.505 5.496v5M8.216 4.496l.055 5.993M10 7.5c.333.333.5.667.5 1v2M12.326 4.5v5.996M8.384 4.496c1.674 0 2.116 0 2.116 1.5s-.442 1.5-2.116 1.5M3.205 9.303c-.09.448-.277 1.21-1.241 1.203C1 10.5.5 9.513.5 8V7c0-1.57.5-2.5 1.464-2.494.964.006 1.134.598 1.24 1.342M12.553 10.5h1.953"
-                    stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="square">
+                    d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
+                    stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                    stroke-linejoin="round">
                   </path>
                 </svg>
+                <span class="docsearch-button-placeholder d-xl-flex d-none">Search</span>
               </span>
-              <span class="docsearch-button-key">K</span>
-            </span>
-          </button>
-        </div>
-      </li>
-    </ul>
+              <span class="docsearch-button-keys d-xl-flex d-none">
+                <span class="docsearch-button-key">
+                  <svg width="15" height="15" class="docsearch-control-key-icon">
+                    <path
+                      d="M4.505 4.496h2M5.505 5.496v5M8.216 4.496l.055 5.993M10 7.5c.333.333.5.667.5 1v2M12.326 4.5v5.996M8.384 4.496c1.674 0 2.116 0 2.116 1.5s-.442 1.5-2.116 1.5M3.205 9.303c-.09.448-.277 1.21-1.241 1.203C1 10.5.5 9.513.5 8V7c0-1.57.5-2.5 1.464-2.494.964.006 1.134.598 1.24 1.342M12.553 10.5h1.953"
+                      stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="square">
+                    </path>
+                  </svg>
+                </span>
+                <span class="docsearch-button-key">K</span>
+              </span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
   </header>
 
   <section class="section hero-section">
-    <div class="social-links">
+    <div class="social-links d-none">
       <a href="https://twitter.com/intent/follow?screen_name=reactnative&amp;region=follow_link"
         class="twitter-follow-button">
         <div class="icon"></div>
@@ -115,7 +113,7 @@
         </div>
       </div>
     </div>
-    <div class="flex-row-reverse align-items-center justify-content-evenly flex-wrap d-flex g-3 py-1 container">
+    <div class="two-cols reverse align-items-center">
       <div class="column first right">
         <svg class="lottie-animation" width="350" height="350" xmlns="http://www.w3.org/2000/svg"
           viewBox="-200 -200 400 400">
