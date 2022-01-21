@@ -21,20 +21,56 @@
   <header
     class="d-flex flex-wrap justify-content-xl-evenly justify-content-between bg-dark navbar--fixed-top main-header">
     <div class="d-flex justify-content-between mx-auto w-100 nav-wrapper">
-      <a class="d-flex align-items-center mb-md-0 text-decoration-none px-2">
+      <div class="d-flex align-items-center mb-md-0 text-decoration-none px-2">
         <button class="navbar__toggle clean-btn d-inline d-xl-none text-white" type="button" tabindex="0">
           <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true">
             <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
               d="M4 7h22M4 15h22M4 23h22"></path>
           </svg>
         </button>
-        <img class="bi me-2" width="38" height="34"
-          src="https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg" />
-        <span class="main-heading">React Native</span>
-        <span class="navbar__item dropdown dropdown--hoverable d-xl-flex d-none">
-          <span class="dropdown__link">0.67</span>
-        </span>
-      </a>
+        <a class="navbar-brand">
+          <img class="bi me-2" width="38" height="34"
+            src="https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg" />
+          <span class="main-heading">React Native</span>
+        </a>
+        <div class="dropdown d-xl-flex d-none">
+          <a class="dropdown-toggle" type="button" id="dropdownMenuButton1">
+            0.67
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Next</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">0.67</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">0.66</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">0.65</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">0.64</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">0.63</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">0.62</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">0.61</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">0.60</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">All versions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <ul class="nav align-items-center">
         <li class="nav-item d-xl-flex d-none"><a class="nav-link">Guides</a></li>
         <li class="nav-item d-xl-flex d-none"><a class="nav-link">Components</a></li>
@@ -61,7 +97,7 @@
           </label>
         </li>
         <li class="nav-item">
-          <div class="search-box px-3">
+          <div class="search-box">
             <button type="button" class="docsearch docsearch-button" aria-label="Search">
               <span class="docsearch-button-container">
                 <svg width="20" height="20" class="docsearch-search-icon" viewBox="0 0 20 20">
