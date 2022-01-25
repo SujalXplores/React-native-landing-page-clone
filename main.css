@@ -635,6 +635,12 @@ table {
   margin-bottom: -6px;
 }
 
+/*section cross platform*/
+.cross-platform svg {
+  margin: -20px 0;
+  max-width: 400px;
+}
+
 /* section talks */
 .talks .twitter-follow-button {
   margin-top: 1.5rem;
