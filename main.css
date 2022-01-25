@@ -144,7 +144,7 @@ a.nav-link {
 
 .dropdown {
   background: transparent;
-  margin: 0 1.5rem;
+  padding: 0.25rem 18px;
   border: 0;
   transition: all 0s ease 0s;
   text-decoration: none;
@@ -161,7 +161,7 @@ a.nav-link {
   padding: 0.5rem !important;
   border-radius: 0.4rem !important;
   left: -17px !important;
-  top: 22px !important;
+  top: 30px !important;
 }
 
 .dropdown:hover .dropdown-menu {
